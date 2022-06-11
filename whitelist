@@ -1,2 +1,11 @@
-local a={"929024753","3560390690"}
-if table.find(a,tostring(game:GetService("Players").LocalPlayer.UserId))==nil then script.Parent.Parent.Parent.Main.Parent:Destroy()end
+local screengui = nil
+for i,v in pairs(game.CoreGui:GetChildren()) do
+	if v and v:FindFirstChild("CrackedX") and v:FindFirstChild("WhiteListAndSetup") then
+		screengui = v
+		break
+	end
+end
+local whitelisted ={"929024753","3560390690"}
+if table.find(whitelisted,tostring(game:GetService("Players").LocalPlayer.UserId)) == nil then
+	screengui:Destroy()
+end
