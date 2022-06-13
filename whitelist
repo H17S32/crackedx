@@ -5,7 +5,7 @@ for i,v in pairs(game.CoreGui:GetChildren()) do
 		break
 	end
 end
-local whitelisted ={"929024753","3560390690"}
+local whitelisted ={"929024753","3560390690","2505717833"}
 if table.find(whitelisted,tostring(game:GetService("Players").LocalPlayer.UserId)) == nil then
 	screengui:Destroy()
 end
